@@ -1,0 +1,13 @@
+
+
+<fieldset>
+  <legend>Log In </legend>
+  <form action='/sessions/new' method='post'>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <p>Email:<input type='text' name='email' placeholder='email'></p>
+      <p>Password:<input type='password' name='password' placeholder='password'></p>
+      <input type='submit' value='Log In'>
+  </form>
+
+<a href='/users/new'>Sign Up</a>
+</fieldset>

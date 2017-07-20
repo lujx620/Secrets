@@ -1,0 +1,13 @@
+<h1>Editing Profile</h1>
+<form action='/users/update/<%=@user.id%>' method='post'>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type= "hidden" name="_method" value="patch">
+    <p>Name:<input type='text' name='user[name]' value='<%=@user.name%>'></p>
+    <p>Email: <input type='text' name='user[email]' value='<%=@user.email%>'></p>
+    <p>Password: <input type='password' name='user[password]' value='password'></p>
+    <p>Password Confirmation: <input type='password' name='user[password_confirmation]' value='password_confirmation'></p>
+    <input type='submit' value='Update'>
+
+  </form>
+
+<button><a href='/users/delete/<%=@user.id%>' data-method ='delete'>Delete Account</a></button>
